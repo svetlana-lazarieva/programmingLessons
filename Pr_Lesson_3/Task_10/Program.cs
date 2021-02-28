@@ -50,11 +50,6 @@ namespace Task_10
                 Console.WriteLine("Зарплата должна быть числовым значением.");
             }
 
-            
-
-            Console.WriteLine("");
-            Console.WriteLine("");
-
             Console.ReadKey();
         }
     }

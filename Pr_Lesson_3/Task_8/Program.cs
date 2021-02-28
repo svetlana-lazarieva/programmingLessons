@@ -27,20 +27,34 @@ namespace Task_8
 
 
             Console.Write("Введите число  от 0 до 100: ");
-            if (double.TryParse(Console.ReadLine(),out var value) &&
+            if (double.TryParse(Console.ReadLine(), out var value) &&
                 value >= 0 && value <= 100)
             {
-                string message = ( value >= Value1 && value <= Value2) ? $"{Mess}[{Value1} - {Value2}]" :
+                // [0 - 14] [15 - 35] [36 - 50][51 - 100]
+                string message = (value >= Value1 && value <= Value2) ? $"{Mess}[{Value1} - {Value2}]" :
                                  ((value >= Value3 && value <= Value4) ? $"{Mess}[{Value3} - {Value4}]" :
                                   (value >= Value5 && value <= Value6) ? $"{Mess}[{Value5} - {Value6}]" :
                                   $"{Mess}[{Value7} - {Value8}]");
+                Console.WriteLine("Для условия: [0 - 14] [15 - 35] [36 - 50][51 - 100]");
                 Console.WriteLine(message);
+                Console.WriteLine();
+
+                if (value == 50)
+                {
+                    // [0 - 14] [15 - 35] [36 - 50] [50 - 100]
+                    message = (value >= Value1 && value <= Value2) ? $"{Mess}[{Value1} - {Value2}]" :
+                              ((value >= Value3 && value <= Value4) ? $"{Mess}[{Value3} - {Value4}]" :
+                               $"{Mess}[{Value5} - {Value6}] и [{Value6} - {Value8}]");
+                    Console.WriteLine("Для условия: [0 - 14] [15 - 35] [36 - 50][50 - 100]");
+                    Console.WriteLine(message);
+                }
+
             }
             else
             {
                 Console.WriteLine("Заданное значение не является числом от 0 до 100.");
             }
-            Console.ReadKey();
+            Console.ReadLine();
         }
     }
 }

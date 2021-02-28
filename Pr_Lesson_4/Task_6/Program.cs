@@ -22,14 +22,16 @@ namespace Task_6
                 Console.Write("Сколько стоит мороженное? ");
                 if (double.TryParse(Console.ReadLine(), out var price))
                 {
+                    int i = 0;
                     if (money >= price)
                     {
                         while (money >= price)
                         {
                             money = money - price;
+                            i++;
                         }
-                        Console.WriteLine("После всех седенных мороженных, у ребенка " +
-                                         $"будет ангина и {money} грн");
+                        Console.WriteLine($"После всех {i} седенных мороженных, у ребенка " +
+                                          $"будет ангина и {money} грн");
                     }
                     else
                     {

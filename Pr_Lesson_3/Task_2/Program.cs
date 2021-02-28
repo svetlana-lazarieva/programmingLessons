@@ -27,9 +27,9 @@ namespace Task_2
 
                 Console.Write("Введите количество купленных товаров(шт): ");
                 // Проверяем количество купленных товаров
-                if (Int32.TryParse(Console.ReadLine(), out var saleCounter))
+                if (int.TryParse(Console.ReadLine(), out var saleCounter))
                 {
-                    if (saleCounter < 3)
+                    if (saleCounter <= 3)
                     {
                         discountPercent = 10;
                     }
