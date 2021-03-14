@@ -17,8 +17,12 @@ namespace Task_1
         static void Main(string[] args)
         {
             Address address = new Address();
-            address.SetAddress("someCountry", "someCity", "someStreet",
-                               "someHouse",1,"someZipCode");
+            address.Country = "someCountry";
+            address.City = "someCity";
+            address.Street = "someStreet";
+            address.House = "someHouse";
+            address.Apartment = 1;
+            address.ZipCode = "someZipCode";
             address.ShowAddress();
             Console.ReadKey();
         }

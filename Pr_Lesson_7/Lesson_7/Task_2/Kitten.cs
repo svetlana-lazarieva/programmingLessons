@@ -28,10 +28,26 @@ namespace Task_2
         //Цвет глаз
         private string _eyeColor;
 
-        public string Name { get; set; }
-        public int Age { get; set; }
-        public string CoatColor { get; set; }
-        public string EyeColor { get; set; }
+        public string Name 
+        {
+            get { return _name; }
+            set { _name = value; } 
+        }
+        public int Age 
+        {
+            get { return _age; }
+            set { _age = value; }
+        }
+        public string CoatColor 
+        {
+            get { return _coatColor; }
+            set { _coatColor = value; }
+        }
+        public string EyeColor 
+        {
+            get { return _eyeColor; }
+            set { _eyeColor = value; }
+        }
 
         /// <summary>
         /// Котенок мявкает

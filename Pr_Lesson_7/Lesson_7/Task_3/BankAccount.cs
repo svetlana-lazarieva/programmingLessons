@@ -21,9 +21,21 @@ namespace Task_3
         //Сумма счета
         private double _invoiceAmount;
 
-        public DateTime AccountOpeningDate { get; set; }
-        public double AccountInterestRate { get; set; }
-        public double InvoiceAmount { get; set; }
+        public DateTime AccountOpeningDate 
+        {
+            get { return _accountOpeningDate; }
+            set { _accountOpeningDate = value; }
+        }
+        public double AccountInterestRate
+        {
+            get { return _accountInterestRate; }
+            set { _accountInterestRate = value; }
+        }
+        public double InvoiceAmount
+        {
+            get { return _invoiceAmount; }
+            set { _invoiceAmount = value; }
+        }
 
 
 

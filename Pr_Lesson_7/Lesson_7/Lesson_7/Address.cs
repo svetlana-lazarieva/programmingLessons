@@ -27,32 +27,35 @@ namespace Task_1
         // Индекс
         private string _zipCode;
 
-        private string Country { get; set; }
-        private string City { get; set; }
-        private string Street { get; set; }
-        private string House { get; set; }
-        private int Apartment { get; set; }
-        private string ZipCode { get; set; }
-
-
-        /// <summary>
-        /// Ввести адрес
-        /// </summary>
-        /// <param name="valCountry">Страна</param>
-        /// <param name="valCity">Город</param>
-        /// <param name="valStreet">Улица</param>
-        /// <param name="valHouse">Дом</param>
-        /// <param name="valApartment">Квартира</param>
-        /// <param name="valZipCode">Индекс</param>
-        public void SetAddress(string valCountry, string valCity, string valStreet,
-                               string valHouse, int valApartment, string valZipCode)
+        public string Country
         {
-            _country = valCountry;
-            _city = valCity;
-            _street = valStreet;
-            _house = valHouse;
-            _apartment = valApartment;
-            _zipCode = valZipCode;
+            get { return _country; }
+            set { _country = value; }
+        }
+        public string City 
+        {
+            get { return _city; }
+            set { _city = value; }
+        }
+        public string Street 
+        {
+            get { return _street; }
+            set { _street = value; }
+        }
+        public string House 
+        {
+            get { return _house; }
+            set { _house = value; }
+        }
+        public int Apartment 
+        {
+            get { return _apartment; }
+            set { _apartment = value; } 
+        }
+        public string ZipCode 
+        {
+            get { return _zipCode; }
+            set { _zipCode = value; } 
         }
 
         /// <summary>
