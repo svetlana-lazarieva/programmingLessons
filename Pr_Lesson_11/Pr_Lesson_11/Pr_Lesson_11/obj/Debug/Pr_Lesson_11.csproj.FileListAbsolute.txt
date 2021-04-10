@@ -1,0 +1,7 @@
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_11\Pr_Lesson_11\Pr_Lesson_11\bin\Debug\Pr_Lesson_11.exe.config
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_11\Pr_Lesson_11\Pr_Lesson_11\bin\Debug\Pr_Lesson_11.exe
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_11\Pr_Lesson_11\Pr_Lesson_11\bin\Debug\Pr_Lesson_11.pdb
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_11\Pr_Lesson_11\Pr_Lesson_11\obj\Debug\Pr_Lesson_11.csprojAssemblyReference.cache
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_11\Pr_Lesson_11\Pr_Lesson_11\obj\Debug\Pr_Lesson_11.csproj.CoreCompileInputs.cache
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_11\Pr_Lesson_11\Pr_Lesson_11\obj\Debug\Pr_Lesson_11.exe
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_11\Pr_Lesson_11\Pr_Lesson_11\obj\Debug\Pr_Lesson_11.pdb

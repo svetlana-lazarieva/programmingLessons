@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Th6sR8nBDayqGEo01JaHdc1X91H/6jlT0NYHpwbMSVmYfy/j09KdmwTciA+2YoMQsgRj7VFpsfDc+lMIL2pAMg==",
+  "success": true,
+  "projectFilePath": "D:\\ProgrammingLessons\\Repo\\programmingLessons\\Project\\FinalProject\\FinalProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
