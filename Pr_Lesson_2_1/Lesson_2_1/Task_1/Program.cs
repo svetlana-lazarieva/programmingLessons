@@ -21,6 +21,10 @@ namespace Task_1
             book.Name = "Пригоди Тома Сойєра - Марк Твен";
             book.Price = 120;
             book.Show();
+            Book<int> book1 = new Book<int>();
+            book1.Name = "Пригоди Тома Сойєра - Марк Твен (тв.переплет)";
+            book1.Price = 125;
+            book1.Show();
         }
     }
 }

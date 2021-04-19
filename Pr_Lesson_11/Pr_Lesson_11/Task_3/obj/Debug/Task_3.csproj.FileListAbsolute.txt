@@ -1,7 +1,0 @@
-D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_11\Pr_Lesson_11\Task_3\bin\Debug\Task_3.exe.config
-D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_11\Pr_Lesson_11\Task_3\bin\Debug\Task_3.exe
-D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_11\Pr_Lesson_11\Task_3\bin\Debug\Task_3.pdb
-D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_11\Pr_Lesson_11\Task_3\obj\Debug\Task_3.csproj.CoreCompileInputs.cache
-D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_11\Pr_Lesson_11\Task_3\obj\Debug\Task_3.exe
-D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_11\Pr_Lesson_11\Task_3\obj\Debug\Task_3.pdb
-D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_11\Pr_Lesson_11\Task_3\obj\Debug\Task_3.csprojAssemblyReference.cache

@@ -43,7 +43,7 @@ namespace Task_2
     /// </summary>
     public class TrainFleet
     {
-        Train[] trains = new Train[2];
+        Train[] trains = new Train[5];
         private const string DestinationNameInfoType = "название пункта назначения";
         private const string TrainNumberInfoType = "номер поезда";
         private const string DepartureTimeInfoType = "время отправления";
