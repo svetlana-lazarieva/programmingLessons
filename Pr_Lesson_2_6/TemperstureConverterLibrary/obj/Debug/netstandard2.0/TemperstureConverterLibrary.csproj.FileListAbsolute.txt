@@ -1,0 +1,9 @@
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_2_6\TemperstureConverterLibrary\bin\Debug\netstandard2.0\TemperstureConverterLibrary.deps.json
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_2_6\TemperstureConverterLibrary\bin\Debug\netstandard2.0\TemperstureConverterLibrary.dll
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_2_6\TemperstureConverterLibrary\bin\Debug\netstandard2.0\TemperstureConverterLibrary.pdb
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_2_6\TemperstureConverterLibrary\obj\Debug\netstandard2.0\TemperstureConverterLibrary.csprojAssemblyReference.cache
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_2_6\TemperstureConverterLibrary\obj\Debug\netstandard2.0\TemperstureConverterLibrary.AssemblyInfoInputs.cache
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_2_6\TemperstureConverterLibrary\obj\Debug\netstandard2.0\TemperstureConverterLibrary.AssemblyInfo.cs
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_2_6\TemperstureConverterLibrary\obj\Debug\netstandard2.0\TemperstureConverterLibrary.csproj.CoreCompileInputs.cache
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_2_6\TemperstureConverterLibrary\obj\Debug\netstandard2.0\TemperstureConverterLibrary.dll
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_2_6\TemperstureConverterLibrary\obj\Debug\netstandard2.0\TemperstureConverterLibrary.pdb

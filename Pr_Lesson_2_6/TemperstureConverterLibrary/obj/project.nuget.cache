@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "wcdzpqBlg4iTgGE2H77zUhYZLP3UXrmx2IKHAQtfUVGjedvvgyafseN0rjybA5ZHfek3PGUcJyk+7thiNnBcdQ==",
+  "success": true,
+  "projectFilePath": "D:\\ProgrammingLessons\\Repo\\programmingLessons\\Pr_Lesson_2_6\\TemperstureConverterLibrary\\TemperstureConverterLibrary.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

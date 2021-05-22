@@ -1,0 +1,7 @@
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_lesson_2_10\Task_1\bin\Debug\Task_1.exe.config
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_lesson_2_10\Task_1\bin\Debug\Task_1.exe
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_lesson_2_10\Task_1\bin\Debug\Task_1.pdb
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_lesson_2_10\Task_1\obj\Debug\Task_1.csprojAssemblyReference.cache
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_lesson_2_10\Task_1\obj\Debug\Task_1.csproj.CoreCompileInputs.cache
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_lesson_2_10\Task_1\obj\Debug\Task_1.exe
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_lesson_2_10\Task_1\obj\Debug\Task_1.pdb

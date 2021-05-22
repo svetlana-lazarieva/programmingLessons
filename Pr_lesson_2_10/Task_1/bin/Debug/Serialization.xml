@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<Cat xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Francisk</Name>
+  <Color>Red</Color>
+  <EyeColor>Green</EyeColor>
+</Cat>
