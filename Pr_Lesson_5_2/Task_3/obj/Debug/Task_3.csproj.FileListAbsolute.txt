@@ -1,0 +1,12 @@
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_5_2\Task_3\bin\Debug\Task_3.exe.config
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_5_2\Task_3\bin\Debug\Task_3.exe
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_5_2\Task_3\bin\Debug\Task_3.pdb
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_5_2\Task_3\bin\Debug\EntityFramework.dll
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_5_2\Task_3\bin\Debug\EntityFramework.SqlServer.dll
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_5_2\Task_3\bin\Debug\EntityFramework.xml
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_5_2\Task_3\bin\Debug\EntityFramework.SqlServer.xml
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_5_2\Task_3\obj\Debug\Task_3.csprojAssemblyReference.cache
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_5_2\Task_3\obj\Debug\Task_3.csproj.CoreCompileInputs.cache
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_5_2\Task_3\obj\Debug\Task_3.csproj.CopyComplete
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_5_2\Task_3\obj\Debug\Task_3.exe
+D:\ProgrammingLessons\Repo\programmingLessons\Pr_Lesson_5_2\Task_3\obj\Debug\Task_3.pdb
