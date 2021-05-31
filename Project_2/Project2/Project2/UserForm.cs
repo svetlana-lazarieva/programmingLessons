@@ -26,8 +26,6 @@ namespace Project2
             InitializeComponent();           
         }
 
-       
-
         private void UserForm_Load(object sender, EventArgs e)
         {
             LoadConfig();
@@ -80,8 +78,6 @@ namespace Project2
             }
         }
 
-
-
         /// <summary>
         /// Получить список товаров
         /// </summary>
@@ -132,7 +128,7 @@ namespace Project2
             // Проверяем, такой есть ли товар в корзине
             if (IsNewProduct(prId, out int rowNumber))
             {
-                AddNewRow(prId, prod, price);
+                AddNewRow(prId, prod, price, 1);
             }
             else
             {
@@ -158,7 +154,7 @@ namespace Project2
         /// <param name="prId"> Id товара</param>
         /// <param name="prod"> Название товара</param>
         /// <param name="price"> Цена товара</param>
-        private void AddNewRow(string prId, string prod, string price)
+        private void AddNewRow(string prId, string prod, string price, double prQ)
         {
             int rowsCpount = dataGridView1.Rows.Count;
             dataGridView1.Rows.Add();
@@ -167,7 +163,7 @@ namespace Project2
             row.Cells["productId"].Value = prId;
             row.Cells["productName"].Value = prod;
             row.Cells["productPrice"].Value = price;
-            row.Cells["productQuantity"].Value = 1;
+            row.Cells["productQuantity"].Value = prQ;
         }
 
         /// <summary>
@@ -222,6 +218,14 @@ namespace Project2
         private void RefreshBascet()
         {
             AddProductsToBascet();
+            SetTotalPrice();
+        }
+
+        /// <summary>
+        /// Устатовить общюю стоимость в поле Всего
+        /// </summary>
+        public void SetTotalPrice()
+        {
             double totalPrice = GetTotalPrice();
             TotalCostLabel.Text = $"Всего: {totalPrice} грн";
         }
@@ -230,6 +234,18 @@ namespace Project2
         private void CreateNewOrderButton_Click(object sender, EventArgs e)
         {
             CreateNewOrder();
+            CleanOrderListComboBox();
+            GetCurrrentUserOrders();
+           
+        }
+
+        /// <summary>
+        /// Создать чек
+        /// </summary>
+        private void CreateReceipt(ReceiptData data)
+        {
+            var receipt = new Receipt();
+            receipt.CreateReceipt(data);
         }
 
         /// <summary>
@@ -239,43 +255,95 @@ namespace Project2
         {
             string ordName = CreateOrderName();
             var usId = AppState.CurrentUser.UserId;
-             
+
+            var receiptData = new ReceiptData();
+            receiptData.UserName = AppState.CurrentUser.userName;
+            receiptData.TimeOfPurchase = DateTime.Now.ToString();
+            receiptData.PurchasedOrders = new List<Product>();
+
             for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
             {
                 DataGridViewRow row = dataGridView1.Rows[i];
                 Int32.TryParse(row.Cells[0].Value.ToString(), out int prId);
                 string prod = row.Cells[1].Value.ToString();
                 string price = row.Cells[2].Value.ToString();
-                Int32.TryParse(row.Cells[0].Value.ToString(), out int prQuantity);
+                Int32.TryParse(row.Cells[3].Value.ToString(), out int prQuantity);
+
+                receiptData.PurchasedOrders.Add(new Product() { productName = prod, productPrice = float.Parse(price) });
 
                 // Добавить в таблицу Order заказ
                 myModel.Orders.Add(new Order()
                 {
-                    //OrderRecordId = 17,
+                    OrderRecordId = 1,
                     orderName = ordName,
                     UserId = usId,
                     ProductId = prId,
                     productQuantity = prQuantity
                 });
+                myModel.SaveChanges();
             }
 
+            receiptData.Summ = TotalCostLabel.Text;
             MessageBox.Show("Заказик принят.");
+            CreateReceipt(receiptData);
         }
 
-        /// <summary>
-        /// Получить Id продукта
-        /// </summary>
-        /// <returns>Id продукта</returns>
-        private int GetProductId(string prod, string price)
-        {
-            int prId = 0;
-            var prNames = myModel.Products.FirstOrDefault(x => x.productName == prod);
-            return prId;
-        }
+        ///// <summary>
+        ///// Получить Id продукта
+        ///// </summary>
+        ///// <returns>Id продукта</returns>
+        //private int GetProductId(string prod, string price)
+        //{
+        //    int prId = 0;
+        //    var prNames = myModel.Products.FirstOrDefault(x => x.productName == prod);
+        //    return prId;
+        //}
       
         private void OrderListComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+            CleanDataGrid();
+            GetOrderData();
+            SetTotalPrice();
+        }
+
+        /// <summary>
+        /// Получить даные о прошлом заказе пользователя
+        /// </summary>
+        private void GetOrderData()
+        {
+            string ordName = OrderListComboBox.Text;
+            if (ordName != null)
+            {
+                OrderNameTextBox.Text = ordName;
+                var orderInfo = myModel.Orders.Where(x => x.orderName == ordName).ToList();
+
+                foreach (var item in orderInfo)
+                {
+                    string prodId = item.ProductId.ToString();
+                    Int32.TryParse(prodId, out int prId);
+                    double prQ = item.productQuantity;
+
+                    var currentProduct = myModel.Products.FirstOrDefault(x => x.ProductId == prId);
+                    string price = currentProduct.productPrice.ToString();
+                    string prName = currentProduct.productName.ToString();
+
+                    AddNewRow(prodId, prName, price, prQ);
+                }
+            }
+        }
+
+        /// <summary>
+        ///  Очистить строки 
+        /// </summary>
+        private void CleanDataGrid()
+        {
+            if (dataGridView1.RowCount > 1)
+            {
+                for (int i = 0; i < dataGridView1.RowCount-1; i++)
+                {
+                    dataGridView1.Rows.Remove(dataGridView1.Rows[i]);
+                }
+            }
         }
 
         /// <summary>
@@ -292,6 +360,14 @@ namespace Project2
                 OrderListComboBox.Items.Add(item);              
                 i++;
             }
+        }
+
+        /// <summary>
+        /// Очистить OrderListComboBox
+        /// </summary>
+        private void CleanOrderListComboBox()
+        {
+            OrderListComboBox.Items.Clear();
         }
 
         /// <summary>

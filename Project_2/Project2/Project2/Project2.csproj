@@ -79,6 +79,7 @@
     </Compile>
     <Compile Include="MyColor.cs" />
     <Compile Include="MyFont.cs" />
+    <Compile Include="Receipt.cs" />
     <Compile Include="TableBase.cs" />
     <Compile Include="MyModel.cs" />
     <Compile Include="Order.cs" />

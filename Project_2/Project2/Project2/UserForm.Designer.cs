@@ -33,6 +33,7 @@ namespace Project2
             this.AllProductsDataGridView = new System.Windows.Forms.DataGridView();
             this.NextPanel = new System.Windows.Forms.Panel();
             this.ServisePanel = new System.Windows.Forms.Panel();
+            this.ConfigButton = new System.Windows.Forms.Button();
             this.OrderLabel = new System.Windows.Forms.Label();
             this.OrderListComboBox = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -43,7 +44,6 @@ namespace Project2
             this.OrderNamePanel = new System.Windows.Forms.Panel();
             this.OrderNameTextBox = new System.Windows.Forms.TextBox();
             this.OrderNameLabel = new System.Windows.Forms.Label();
-            this.ConfigButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -107,6 +107,16 @@ namespace Project2
             this.ServisePanel.Name = "ServisePanel";
             this.ServisePanel.Size = new System.Drawing.Size(427, 59);
             this.ServisePanel.TabIndex = 0;
+            // 
+            // ConfigButton
+            // 
+            this.ConfigButton.Location = new System.Drawing.Point(361, 4);
+            this.ConfigButton.Name = "ConfigButton";
+            this.ConfigButton.Size = new System.Drawing.Size(63, 22);
+            this.ConfigButton.TabIndex = 2;
+            this.ConfigButton.Text = "Настройки";
+            this.ConfigButton.UseVisualStyleBackColor = true;
+            this.ConfigButton.Click += new System.EventHandler(this.ConfigButton_Click);
             // 
             // OrderLabel
             // 
@@ -200,16 +210,6 @@ namespace Project2
             this.OrderNameLabel.Size = new System.Drawing.Size(136, 17);
             this.OrderNameLabel.TabIndex = 0;
             this.OrderNameLabel.Text = "Список покупочек: ";
-            // 
-            // ConfigButton
-            // 
-            this.ConfigButton.Location = new System.Drawing.Point(361, 4);
-            this.ConfigButton.Name = "ConfigButton";
-            this.ConfigButton.Size = new System.Drawing.Size(63, 22);
-            this.ConfigButton.TabIndex = 2;
-            this.ConfigButton.Text = "Настройки";
-            this.ConfigButton.UseVisualStyleBackColor = true;
-            this.ConfigButton.Click += new System.EventHandler(this.ConfigButton_Click);
             // 
             // UserForm
             // 

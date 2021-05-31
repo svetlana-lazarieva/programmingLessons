@@ -1,15 +1,8 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Serialization;
 
 
 namespace Project2
@@ -33,7 +26,7 @@ namespace Project2
         /// <summary>
         /// Сохранить настройки
         /// </summary>
-        private void SaveConfig()
+        public void SaveConfig()
         {
             var dir = Path.GetDirectoryName(UserForm.ConfigFilePath);
             if (!Directory.Exists(dir))
@@ -89,8 +82,6 @@ namespace Project2
                 config.FontColor.B = userForm.ForeColor.B;
             }
         }
-
-        
 
         private void textBoxFont_Click(object sender, EventArgs e)
         {
