@@ -21,14 +21,14 @@ namespace Project2
 
         private void buttonSave_Click(object sender, EventArgs e)
         {
-            SaveConfig();
+            SaveConfig(UserForm.ConfigFilePath);
         }
         /// <summary>
         /// Сохранить настройки
         /// </summary>
-        public void SaveConfig()
+        public void SaveConfig(string path)
         {
-            var dir = Path.GetDirectoryName(UserForm.ConfigFilePath);
+            var dir = Path.GetDirectoryName(path);
             if (!Directory.Exists(dir))
             {
                 Directory.CreateDirectory(dir);
@@ -37,7 +37,7 @@ namespace Project2
             int currentUserId = AppState.CurrentUser.Id;
             Config.UserSettings[currentUserId] = config;
             string json = JsonConvert.SerializeObject(Config.UserSettings);
-            File.WriteAllText(UserForm.ConfigFilePath, json);
+            File.WriteAllText(path, json);
         }
 
         private void buttonBackColor_Click(object sender, EventArgs e)

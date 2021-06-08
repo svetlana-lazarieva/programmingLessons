@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using Project2;
+using System.IO;
 
 namespace Prodect2Test
 {
@@ -8,17 +9,18 @@ namespace Prodect2Test
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void AddNewOrderRow_Test()
         {
-            // Arrange
+          
+            
 
-            //Act
-            Project2.UserForm userForm = new UserForm();
-            Project2.ConfigForm confForm = new ConfigForm(userForm);
-            confForm.SaveConfig();
-            //SaveConfig();
 
-            //Asseert
+
+
         }
-    }
+
+        
+
+
+        }
 }

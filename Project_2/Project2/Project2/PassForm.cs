@@ -31,7 +31,6 @@ namespace Project2
             bool userExsists = authenticator.Authenticate(NameTextBox.Text, PassTextBox.Text);
             if (userExsists)
             {
-                // 2 - adm 1, 3 - user 0 - no
                 userType = AppState.CurrentUser.userType;
             }
 

@@ -81,7 +81,7 @@ namespace Project2
         /// <summary>
         /// Получить список товаров
         /// </summary>
-        private void GetProdudtList()
+        public void GetProdudtList()
         {
             string sql = "select * from Product";
             var query = myModel.Database.SqlQuery<Product>(sql);
@@ -99,7 +99,7 @@ namespace Project2
         /// <summary>
         /// Добавить колонки в DataGridView
         /// </summary>
-        private void AddCells()
+        public void AddCells()
         {
             AllProductsDataGridView.Columns.Add("productId", "Id");
             AllProductsDataGridView.Columns.Add("productName", "Название товара");
@@ -230,7 +230,6 @@ namespace Project2
             TotalCostLabel.Text = $"Всего: {totalPrice} грн";
         }
 
-
         private void CreateNewOrderButton_Click(object sender, EventArgs e)
         {
             CreateNewOrder();
@@ -272,20 +271,32 @@ namespace Project2
                 receiptData.PurchasedOrders.Add(new Product() { productName = prod, productPrice = float.Parse(price) });
 
                 // Добавить в таблицу Order заказ
-                myModel.Orders.Add(new Order()
-                {
-                    OrderRecordId = 1,
-                    orderName = ordName,
-                    UserId = usId,
-                    ProductId = prId,
-                    productQuantity = prQuantity
-                });
-                myModel.SaveChanges();
+                AddNewOrderRow(ordName, usId, prId, prQuantity);
             }
 
             receiptData.Summ = TotalCostLabel.Text;
             MessageBox.Show("Заказик принят.");
             CreateReceipt(receiptData);
+        }
+
+        /// <summary>
+        /// Добавить в таблицу Order заказ
+        /// </summary>
+        /// <param name="ordName"> Имя заказа</param>
+        /// <param name="usId"> Id пользователя</param>
+        /// <param name="prId"> Id товара</param>
+        /// <param name="prQuantity">Количество товара</param>
+        public void AddNewOrderRow(string ordName, int usId, int prId, int prQuantity)
+        {
+            myModel.Orders.Add(new Order()
+            {
+                OrderRecordId = 1,
+                orderName = ordName,
+                UserId = usId,
+                ProductId = prId,
+                productQuantity = prQuantity
+            });
+            myModel.SaveChanges();
         }
 
         ///// <summary>
@@ -298,7 +309,7 @@ namespace Project2
         //    var prNames = myModel.Products.FirstOrDefault(x => x.productName == prod);
         //    return prId;
         //}
-      
+
         private void OrderListComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             CleanDataGrid();
